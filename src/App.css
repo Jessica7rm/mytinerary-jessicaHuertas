@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -23,25 +17,31 @@ a {
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
+  color: black;
   transition: border-color 0.25s;
+  font-weight: 500;
+  text-decoration: inherit;
 }
 
 a:hover {
-  border-color: #4F46E5;
+  border-color: rgb(225, 25, 6);
+}
+
+h1 {
+  font-size: 2em;
 }
 
 #login {
-  background-color: #4F46E5;
+  background-color: rgb(225, 25, 6);
   color: white;
 }
 
 #icon{
-  background-color: #4F46E5;
   padding-right: 5px;
 }
 
 header{
-  min-height: 10vh;
+  min-height: 6vh;
 }
 
 nav h2 {
@@ -52,35 +52,37 @@ nav h2 {
 nav {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 4rem;
+  padding: 0.6rem 1rem 0.6rem 1rem;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid black;
 }
 
 main {
   min-height: 90vh;
+  background-color: rgb(249, 123, 112);
 }
 
 .contenedor {
-  display: inline-block;
+  display: flex;
+  background-image: url("/public/paisaje.jpg");
+  background-size: cover;
   width: 100%;
-  margin: 10%;
+  padding: 8%;
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
   width: 40%;
-  margin-bottom: 4rem;
-  margin-right: 8rem;
-  display: inline-block;
-}
-
-#imagen {
-  width: 20rem;
+  margin-right: 5rem;
   padding: 1rem; 
+  font-weight: 700;
+  color: white;
 }
 
 #bmore{
-  background-color: #4F46E5;
+  background-color: rgb(225, 25, 6);
   margin-top: 1rem;
   margin-bottom: 5rem;
   color: white;
@@ -89,28 +91,75 @@ main {
 }
 
 footer{
-  min-height: 10vh; 
-  background-color: rgb(212, 238, 247);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 6vh; 
+  background-color: rgb(225, 25, 6);
+}
+
+footer p{
+  text-align: center;
+  width: 100%;
+}
+
+.carousel{
+  padding: 1rem;
+  padding-bottom: 4rem;
   text-align: center;
 }
 
-@media (max-width:910px){
+.card{
+  display: flex;
+  padding-top: 1rem;
+  width: 90%;
+  align-items: center;
+  border: none;
+  background-color: rgb(249, 123, 112);
+}
+
+.card-img-top{
+  width: 450px;
+  height: 250px;
+  object-fit: cover;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  color: aliceblue;
+}
+
+
+
+@media (max-width:960px){
   .text {
     width: 50%;
     margin-right: 0rem;
+    color: white;
   }
   #imagen {
-    width: 15rem;
+    width: 20rem;
+    padding: 0%;
+  }
+  .card-img-top{
+    width: 300px;
+    height: 150px;
   }
 }
 
 @media (max-width:542px){
 #contenedor {
-  margin: 1rem;
+  margin: 0rem;
 }
 .text {
 width: 70%;
 margin-bottom: 0rem;
 margin-top: 4rem;
+}
+#imagen {
+  width: 15rem;
+  padding: 0%;
 }
 }
