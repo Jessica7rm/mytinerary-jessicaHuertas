@@ -1,0 +1,61 @@
+.contenedor {
+    display: flex;
+    background-image: url("/landscape.jpg");
+    background-size: cover;
+    width: 100%;
+    padding: 8%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 5rem;
+    padding: 1rem; 
+    font-weight: 700;
+    color: white;
+  }
+  
+  #vmore{
+    background-color: rgb(225, 25, 6);
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    color: white;
+    width: 10rem;
+    display: flex;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: inherit;
+  }
+
+  #vmore:hover{
+    transform: scale(1.2);
+  }
+  
+  @media (max-width:960px){
+    .text {
+      width: 50%;
+      margin-right: 0rem;
+      color: white;
+    }
+    .card-img-top{
+      width: 300px;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width:542px){
+  #contenedor {
+    margin: 0rem;
+  }
+  .text {
+  width: 70%;
+  margin-bottom: 0rem;
+  margin-top: 4rem;
+  }
+  }
+  
