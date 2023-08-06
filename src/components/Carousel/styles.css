@@ -1,46 +1,18 @@
 .carousel{
     padding: 1rem;
-    padding-bottom: 4rem;
     text-align: center;
   }
   
   .carousel-control-prev-icon{
     background-color: black;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
   
   .carousel-control-next-icon{
     background-color: black;
     border-radius: 20px;
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
+
   
-  .card{
-    display: flex;
-    padding-top: 1rem;
-    padding-left: 4rem;
-    width: 90%;
-    align-items: center;
-    border: none;
-  }
-  
-  .card-img-top{
-    width: 450px;
-    height: 250px;
-    object-fit: cover;
-    justify-content: center;
-    border-radius: 10px;
-  }
-  
-  .card:hover{
-    transform: scale(1.05);
-    border: none;
-  }
-  
-  @media (max-width:960px){
-    .card-img-top{
-      width: 300px;
-      height: 150px;
-    }
-  }

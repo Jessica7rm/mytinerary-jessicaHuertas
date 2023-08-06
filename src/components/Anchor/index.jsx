@@ -1,10 +1,11 @@
 import React from 'react'
+import Nav from 'react-bootstrap/Nav';
 import './styles.css'
 
 function index({ href, text }) {
     return (
         <>
-            <a href={href}>{text}</a>
+            <Nav.Link href={href}>{text}</Nav.Link>
         </>
     )
 }
