@@ -1,13 +1,10 @@
-import React from 'react'
 import './styles.css'
 
 function index() {
   return (
     <>
-    <div className='callaction'>
-      <h3>SAY YES TO ADVENTURE</h3>
       <h3>Let's book the vacation of your dreams!</h3>
-    </div>
+      <a href="" className="vmore"><i className="bi bi-airplane-engines"></i>Let's Go</a>
     </>
   )
 }

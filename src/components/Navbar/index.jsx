@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,7 +17,7 @@ function index() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                     <Nav>
-                        {data.map(each => <Anchor href={each.href} text={each.text} />)}
+                        {data.map((each, index )=> (<Anchor key={index} href={each.href} text={each.text} />))}
                         <Nav.Link href="" id="login"><img id="icon" src={iconPerson} />Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
