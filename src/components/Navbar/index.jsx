@@ -7,8 +7,8 @@ import './styles.css'
 
 function index() {
     let data = [
-        { href: '#', text: 'Home' },
-        { href: '#', text: 'Cities' }
+        { url: '/', text: 'Home' },
+        { url: '/cities', text: 'Cities' }
     ]
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -17,7 +17,7 @@ function index() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
                     <Nav>
-                        {data.map((each, index )=> (<Anchor key={index} href={each.href} text={each.text} />))}
+                        {data.map((each, index )=> (<Anchor key={index} url={each.url} text={each.text} />))}
                         <Nav.Link href="" id="login"><img id="icon" src={iconPerson} />Login</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

@@ -1,10 +1,11 @@
-import Nav from 'react-bootstrap/Nav';
 import './styles.css'
+import { Link as Anchor } from 'react-router-dom'
 
-function index ({ href, text }) {
+
+function index ({ url, text }) {
     return (
         <>
-            <Nav.Link href={href}>{text}</Nav.Link>
+            <Anchor to={url} className="nav-link">{text}</Anchor>
         </>
     )
 }
