@@ -1,80 +1,74 @@
-{
-"slide1": [
+[
     {
         "id": 1,
         "place": "Venice",
-        "pais": "Italy",
+        "country": "Italy",
         "src": "/Venice.jpg"
     },
     {
         "id": 2,
         "place": "Cancun",
-        "pais": "Mexico",
+        "country": "Mexico",
         "src": "/cancun.jpg"
     },
     {
         "id": 3,
         "place": "Iguazu",
-        "pais": "Argentina",
+        "country": "Argentina",
         "src": "/iguazu.jpg"
     },
     {
         "id": 4,
         "place": "Barcelona",
-        "pais": "Spain",
+        "country": "Spain",
         "src": "/barcelona.jpg"
-    }     
-],
-"slide2": [
+    },
     {
         "id": 5,
         "place": "New York",
-        "pais": "United States",
+        "country": "United States",
         "src": "/newyork.jpg"
     },
     {
         "id": 6,
         "place": "Paris",
-        "pais": "France",
+        "country": "France",
         "src": "/paris.jpg"
     },
     {
         "id": 7,
         "place": "London",
-        "pais": "United Kingdom",
+        "country": "United Kingdom",
         "src": "/london.jpg"
     },
     {
         "id": 8,
         "place": "Florence",
-        "pais": "Italy",
+        "country": "Italy",
         "src": "/florence.jpg"
-    }
-],
-"slide3": [
+    },
     {
         "id": 9,
         "place": "Rome",
-        "pais": "Italy",
+        "country": "Italy",
         "src": "/rome.jpg"
     },
     {
         "id": 10,
         "place": "Ephesus",
-        "pais": "Türkiye",
+        "country": "Türkiye",
         "src": "/ephesus.jpg"
     },
     {
         "id": 11,
         "place": "Santorini",
-        "pais": "Greece",
+        "country": "Greece",
         "src": "/santorini.jpg"
     },
     {
         "id": 12,
         "place": "Perito Moreno",
-        "pais": "Argentina",
+        "country": "Argentina",
         "src": "/moreno.jpg"
     }
 ]
-}
