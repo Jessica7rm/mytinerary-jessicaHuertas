@@ -1,0 +1,21 @@
+.card{
+    display: flex;
+    padding-top: 1rem;
+    padding-left: 3.5rem;
+    width: 90%;
+    align-items: center;
+    border: none;
+  }
+
+  
+  @media (max-width:990px){
+    .card{
+      padding-left: 0rem;
+    }
+  }
+  @media (max-width:542px){
+    .card{
+      padding-left: 15px;
+    }
+  }
+  

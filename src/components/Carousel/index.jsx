@@ -1,7 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './styles.css'
-import Slide1 from '../Slide/slide1'
-import Slide2 from '../Slide/slide2'
+import Slide1 from '../Slide/Slide1'
+import Slide2 from '../Slide/Slide2'
 import Slide3 from '../Slide/slide3'
 
 function index() {
