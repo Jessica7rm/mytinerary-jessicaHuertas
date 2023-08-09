@@ -12,7 +12,7 @@ function Slide({ slide }) {
 
     arraySelect()
     return (
-        <div className="row row-cols-1 row-cols-md-2 g-4">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-sm-2  g-4">
             {arrList.map((elem) => (<CardHome key={elem.id} src={elem.src} place={elem.place} country={elem.country} />))}
         </div>
     )

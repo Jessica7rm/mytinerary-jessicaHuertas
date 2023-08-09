@@ -1,6 +1,5 @@
 a {
   max-width: 8rem;
-  border-radius: 8px;
   border: 1px solid transparent;
   margin: 0px 10px 0px 10px;
   padding: 0.6em 1.2em;
@@ -13,5 +12,6 @@ a {
 }
 
 a:hover {
-  border: solid rgb(19, 6, 5);
+  border-bottom: solid rgb(19, 6, 5);
+  padding: 8px;
 }

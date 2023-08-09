@@ -29,7 +29,7 @@ function index() {
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
-                                <Nav className="justify-content-end flex-grow-1 pe-3">
+                                <Nav className="justify-content-end flex-grow-1 gap-4 pe-3">
                                     {data.map((each, index) => (<Anchor key={index} url={each.url} text={each.text} />))}
                                     <Nav.Link href="" id="login"><img id="icon" src={iconPerson} />Login</Nav.Link>
                                 </Nav>
