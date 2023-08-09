@@ -10,12 +10,12 @@
   
   @media (max-width:990px){
     .card{
-      padding-left: 0rem;
+      padding-left: 2.5rem;
     }
   }
   @media (max-width:542px){
     .card{
-      padding-left: 15px;
+      padding-left: 25px;
     }
   }
   

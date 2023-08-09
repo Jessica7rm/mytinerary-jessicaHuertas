@@ -1,8 +1,11 @@
-.intro {
+.containerCity {
+    display: flex;
+    flex-direction: column;
     padding-top: 5rem;
     text-align: center;
+    align-items: center;
 }
 
-.intro img{
-    width: 500px;
+.containerCity img{
+    width: 50%;
 }

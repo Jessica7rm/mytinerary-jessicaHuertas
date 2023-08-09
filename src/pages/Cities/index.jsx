@@ -4,10 +4,10 @@ import './styles.css'
 function index() {
   return (
     <main>
-      <div className="intro">
+      <div className="containerCity">
         <h2>Welcome to Cities</h2>
         <p>Work in progress</p>
-        <img src="/workin.jpg" alt="Work in progress"/>
+        <img src="/working.jpg" alt="Work in progress"/>
       </div>
     </main>
   )

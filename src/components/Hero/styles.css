@@ -1,4 +1,4 @@
-.contenedor {
+.containerHero {
     display: flex;
     background-image: url("/landscape.jpg");
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
   }
   
   @media (max-width:542px){
-  #contenedor {
+  #containerHero {
     margin: 0rem;
   }
   .text {

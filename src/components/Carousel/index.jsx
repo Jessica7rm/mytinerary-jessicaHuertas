@@ -1,8 +1,6 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './styles.css'
-import Slide1 from '../Slide/Slide1'
-import Slide2 from '../Slide/Slide2'
-import Slide3 from '../Slide/slide3'
+import Slide from '../Slide/Slide'
 
 function index() {
   return (
@@ -10,9 +8,15 @@ function index() {
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
         <h2>POPULAR MYTINERARIES</h2>
         <div className="carousel-inner">
-          <Slide1 />
-          <Slide2 />
-          <Slide3 />
+          <div className="carousel-item active" data-bs-interval="6000">
+            <Slide slide={0} />
+          </div>
+          <div className="carousel-item" data-bs-interval="6000">
+            <Slide slide={1} />
+          </div>
+          <div className="carousel-item" data-bs-interval="6000">
+            <Slide slide={2} />
+          </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
