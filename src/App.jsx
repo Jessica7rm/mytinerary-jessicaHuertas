@@ -1,7 +1,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Cities from './pages/Cities';
-import Layout from './layouts/Layout';
+import Layout from './Layouts/Layout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([

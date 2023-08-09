@@ -6,7 +6,8 @@ function index() {
     <main>
       <div className="intro">
         <h2>Welcome to Cities</h2>
-        <p>Next to aperture</p>
+        <p>Work in progress</p>
+        <img src="/workin.jpg" alt="Work in progress"/>
       </div>
     </main>
   )
