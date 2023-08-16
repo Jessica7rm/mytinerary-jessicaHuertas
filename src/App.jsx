@@ -1,6 +1,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Cities from './pages/Cities';
+import CityDetail from './pages/CityDetail'
 import Layout from './Layouts/Layout';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -9,7 +10,8 @@ const router = createBrowserRouter([
     path: '/', element: <Layout />,
     children: [
       { path: '/', element: <Home /> },
-      { path:'/cities', element: <Cities /> }
+      { path:'/cities', element: <Cities /> },
+      { path: '/city', element: <CityDetail />}
     ]
   },
 ])

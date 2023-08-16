@@ -1,0 +1,11 @@
+.containerCity {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.containerCity img{
+    width: 50%;
+}

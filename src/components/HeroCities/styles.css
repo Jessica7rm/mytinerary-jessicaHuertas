@@ -1,0 +1,18 @@
+.heroCities {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/bgcity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 20rem;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
+    justify-content: center;
+    font-weight: 700; 
+    text-shadow: 1px 1px white;
+  }
+  
+  
+ 

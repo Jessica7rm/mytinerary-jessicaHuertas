@@ -1,14 +1,18 @@
 import React from 'react'
 import './styles.css'
+import HeroCities from '../../components/HeroCities';
+import Search from '../../components/Search';
+import GroupCards from '../../components/GroupCards';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function index() {
   return (
     <main>
       <div className="containerCity">
-        <h2>Welcome to Cities</h2>
-        <p>Work in progress</p>
-        <img src="/working.jpg" alt="Work in progress"/>
-      </div>
+        <HeroCities />
+        </div>  
+        <Search />
+        <GroupCards />
     </main>
   )
 }
