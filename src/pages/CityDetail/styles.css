@@ -1,11 +1,69 @@
-.containerCity {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    text-align: center;
-    align-items: center;
+.cardDet {
+    border: solid rgb(7, 7, 54);
+    box-shadow: rgb(7, 7, 54) 8px 8px 5px;
+    margin: 0 10% 0 10%;
 }
 
-.containerCity img{
-    width: 50%;
+.cardDet p {
+    padding-left: 5px;
+    width: 15rem;
+    background-color: rgba(181, 228, 241, 0.628);
+}
+
+.cardDet img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.card-img-overlay a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.cardDet:hover {
+    transform: none;
+    border: solid black;
+}
+
+.cardDet a {
+    max-width: 10rem;
+    border: 0;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.cardDet a:hover {
+    border: none;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+}
+
+.noitineraries img {
+    width: 40%;
+}
+
+.noitineraries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width:564px) {
+    .cardDet {
+        margin: 0 5% 0 5%;
+    }
+    .cardDet img {
+        height: 20rem;
+    }
+}
+
+
+@media (max-width:290px) {
+    .cardDet p {
+        width: 100%;
+    }
 }

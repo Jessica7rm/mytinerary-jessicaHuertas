@@ -1,7 +1,7 @@
 .heroCities {
     display: flex;
     flex-direction: column;
-    background-image: url("/bgcity.jpg");
+    background-image: url("/thailand.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -9,9 +9,10 @@
     height: 20rem;
     padding: 0 1rem 0 1rem;
     text-align: center;
+    color: white;
+    font-weight: 800;
     justify-content: center;
-    font-weight: 700; 
-    text-shadow: 1px 1px white;
+    text-shadow: 2px 2px rgb(0, 0, 0);
   }
   
   
