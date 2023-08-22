@@ -1,0 +1,39 @@
+.cardCity{
+    border: solid rgb(7, 7, 54);
+    box-shadow: rgb(7, 7, 54) 8px 8px 5px;
+}
+
+.cardCity p{
+    padding-left: 5px;
+    background-color:  rgba(181, 228, 241, 0.628);
+}
+
+.cardCity img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-img-overlay a{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.cardCity:hover{
+ transform: none;
+ border: solid black;
+}
+
+.cardCity a{
+    max-width: 10rem;
+    border: 0;
+    margin-bottom: 1rem;
+}
+
+.cardCity a:hover{
+ border: none;
+ margin-bottom: 1rem;
+}
+
+
