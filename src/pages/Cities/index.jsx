@@ -30,13 +30,22 @@ const index = () => {
       <div className="containerCity">
         <HeroCities />
       </div>
-      <form className="d-flex gap-3 search" onSubmit={handleSumit}>
-        <input type="text" placeholder="Search" ref={input} />
-        <button className="btn btn-secondary"><i className="bi bi-search-heart"></i></button>
+      <form className="row g-3 search" onChange={handleSumit}>
+        <input type="text" className="col-auto" placeholder="Search your city " ref={input} />
+
       </form>
       <div className='containerCard'>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-          {cities.map((elem) => (<CardCity key={elem._id} id={"/city/" + elem._id} image={elem.image} place={elem.place} country={elem.country} />))}
+          {cities.length > 0 ? (
+            cities.map((elem) => <CardCity key={elem._id} id={"/city/" + elem._id} image={elem.image} place={elem.place} country={elem.country} />)
+          )
+            : (
+              <div className='not'>
+                <h2 >We don't have that itinerary.</h2>
+                <h3> Try another city !</h3>
+                <img src="/noTinerary.jpg" alt="No Itineraries" />
+              </div>
+            )}
         </div>
       </div>
     </main>
