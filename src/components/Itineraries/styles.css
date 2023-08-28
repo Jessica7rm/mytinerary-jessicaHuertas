@@ -1,0 +1,15 @@
+.noitineraries img {
+    width: 40%;
+}
+
+.noitineraries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.containItineraries a{
+margin-top: 1rem;
+}

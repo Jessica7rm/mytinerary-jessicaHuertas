@@ -3,6 +3,7 @@ import './styles.css'
 import { useState, useEffect } from 'react'
 import { getCity } from '../../service/citiesQueries'
 import { useParams } from 'react-router-dom'
+import Itineraries from '../../components/Itineraries'
 
 const index = () => {
   const [city, setCity] = useState({});
@@ -26,13 +27,11 @@ const index = () => {
         </div>
       </div>
       <div className="card-body cardDet">
-          <p className="card-text">{city.description}</p>
-        </div>
-      <div className='noitineraries'>
-        <img src="/noTinerary.jpg" alt="No Itineraries" />
-        <h3>There are no itineraries</h3>
-        <p>Work in progress</p>
+        <p className="card-text">{city.description}</p>
       </div>
+      <>
+        <Itineraries />
+      </>
     </main>
   )
 }

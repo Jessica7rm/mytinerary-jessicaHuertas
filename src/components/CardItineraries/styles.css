@@ -1,0 +1,30 @@
+.containItineraries{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.itineraries{
+    margin: 2rem;
+    border: solid rgb(7, 7, 54);
+    color: rgb(10, 7, 7);
+}
+
+.itineraries img{
+    max-width: 250px;
+    padding: 10px;
+}
+
+.itineraries .card-body{
+   justify-content: space-around;
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap;
+   color: black;
+}
+
+.img-user{
+    width: 100px;
+    border-radius: 100%;
+}

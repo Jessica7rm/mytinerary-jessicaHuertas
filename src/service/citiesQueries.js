@@ -21,3 +21,12 @@ export const getCity = async (id) => {
         return []
     }
 }
+
+export const getItinerariesCity = async () => {
+    try {
+        const {data} = await cities("/city/itinerary/"+cityId)
+        return data.itinerary
+    } catch (err){
+        return []
+    }
+}
