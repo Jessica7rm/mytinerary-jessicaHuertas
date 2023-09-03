@@ -3,7 +3,6 @@
     text-align: center;
 }
 
-
 .itineraries {
     margin: 5px;
     border: solid rgb(7, 7, 54);
@@ -36,6 +35,10 @@
     border-radius: 100%;
 }
 
+.tin{
+    width: 80%;
+}
+
 .tin:hover {
     transform: none;
 }
@@ -51,4 +54,17 @@
 
 .texin img{
     width: 30%;
+    object-fit: cover;
 }
+
+.info{
+    margin: 0.5rem;
+}
+@media (max-width:754px){
+    .tin{
+        width: 100%;
+    }
+    .texin img{
+        width: 50%;
+    }
+  }

@@ -19,8 +19,6 @@ const index = () => {
   useEffect(() => {
     getItinerariesCity(cityId.id).then(res => {
       dispatch(getItinerariesAction.get_itineraries(res))
-
-      console.log(cityId.id, "id desde itinerari");
     })
       .catch(err => console.log(err))
   }, []);
@@ -29,7 +27,7 @@ const index = () => {
     <>
       <div className='containItineraries'>
         {itinerariesInStore.length > 0 ? (                                         
-          itinerariesInStore.map((elem) => <CardItineraries key={elem._id} title={elem.title} name={elem.name} duration={elem.duration} price={elem.price} hashtags={elem.hashtags} />)
+          itinerariesInStore.map((elem) => <CardItineraries key={elem._id} title={elem.title} img={elem.img} name={elem.name} duration={elem.duration} price={elem.price} hashtags={elem.hashtags} idCol={"collapse"+elem._id} />)
         )
           : (
             <div className='noitineraries'>
