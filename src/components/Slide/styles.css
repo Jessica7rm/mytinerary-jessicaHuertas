@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.card:hover {
+.home:hover {
   transform: scale(1.05);
   border: none;
 }

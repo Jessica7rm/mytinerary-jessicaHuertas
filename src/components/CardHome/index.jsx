@@ -4,7 +4,7 @@ import './styles.css'
 function index({ src, place, country }) {
   return (
     <div className="col">
-            <div className="card">
+            <div className="card home">
               <img src={src} className="card-img-top" alt={place} />
               <div className="card-title">
                 <h3>{place}, {country}</h3>

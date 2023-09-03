@@ -21,3 +21,4 @@ export const getCity = async (id) => {
         return []
     }
 }
+
