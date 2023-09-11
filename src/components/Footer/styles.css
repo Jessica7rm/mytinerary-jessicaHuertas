@@ -2,7 +2,6 @@ footer {
   display: flex;
   min-height: 8vh;
   background-color: rgb(181, 228, 241);
-  margin-top: 3rem;
 }
 
 nav {
