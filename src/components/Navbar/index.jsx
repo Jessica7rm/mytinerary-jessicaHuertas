@@ -4,13 +4,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Anchor from '../Anchor'
 import iconPerson from '/person-fill.svg'
+import Button from 'react-bootstrap/Button';
 import './styles.css'
+import { useSelector, useDispatch } from "react-redux";
+import getUsersAction from "../../store/actions/usersActions";
+import { NavLink } from 'react-router-dom';
 
 function index() {
     let data = [
         { url: '/', text: 'Home' },
         { url: '/cities', text: 'Cities' }
     ]
+
+    const user = useSelector(store => store.usersReducers.user)
+    const dispatch = useDispatch();
     return (
         <>
             {['md'].map((expand) => (
@@ -31,7 +38,21 @@ function index() {
                             <Offcanvas.Body>
                                 <Nav className="justify-content-end flex-grow-1 gap-4 pe-3">
                                     {data.map((each, index) => (<Anchor key={index} url={each.url} text={each.text} />))}
-                                    <Nav.Link href="" id="login"><img id="icon" src={iconPerson} />Login</Nav.Link>
+
+                                    {user ? (
+                                        <Button className="btn btn-primary" onClick={() => dispatch(getUsersAction.sign_out())}>
+                                            {" "}
+                                            Log out{" "}
+                                        </Button>
+                                    ) : (
+                                        <>
+                                            <Nav.Link href="/signUp" id="register">Register</Nav.Link>
+                                            <Nav.Link href="/signIn" id="login"><img id="icon" src={iconPerson} />Login</Nav.Link>
+                                        </>
+                                    )}
+
+                                    {/*  */}
+
                                 </Nav>
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>

@@ -1,0 +1,63 @@
+.singUp{
+    display: inline-flex;
+    align-items: center;
+    background-image:  url("/aurora.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}   
+
+.sTitles{
+    text-align: center;
+    width: 30%;
+}
+
+.formUp {
+    background-color: aliceblue;
+    padding: 2rem;
+    padding-right: 4rem;
+    width: 35rem;
+    margin: 2rem;
+    justify-content: center;
+}
+
+.formUp input{
+    margin: 1rem;
+}
+
+.formUp select{
+    margin: 1rem;
+}
+
+.formGroup a{
+    border: none;
+    padding: 8px;
+}
+
+.formGroup a:hover{
+    border: none;
+    padding: 8px;
+}
+
+.formGroup{
+   border-top: 2px black solid;
+}
+
+
+@media (max-width:768px){
+    .sTitles{
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .formUp{
+        margin: 0;
+        margin-top: 2rem;
+        padding: 1rem;
+        padding-right: 2rem;
+    }
+  }
+

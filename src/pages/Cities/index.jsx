@@ -13,7 +13,6 @@ const index = () => {
   const input = useRef(null);
 
   let citiesInStore = useSelector(store => store.citiesReducers.cities)
-  console.log(citiesInStore);
 
   const dispatch = useDispatch()
 
