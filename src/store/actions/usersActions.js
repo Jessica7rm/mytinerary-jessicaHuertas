@@ -17,16 +17,13 @@ const sign_in = createAsyncThunk("sign_in", async (payload) => {
                 console.log("Successfully logged in");
                 return response.data.user
             })
-            .catch((error) =>{
-                error.response.data.message.forEach((message) => console.log(message))
-            });
 
         return {
             user: user
         };
     } catch (err) {
         console.log(err.message);
-        alert ("Could not log in, please check the email and password are correct")
+        alert("Could not log in, please check the email and password are correct")
     }
 });
 
@@ -42,7 +39,7 @@ const sign_up = createAsyncThunk("sign_up", async (body) => {
 
     } catch (err) {
         console.log(err.message);
-        alert ("Could not register, please check that the data is correct")
+        alert("Could not register, please check that the data is correct")
     }
 });
 
@@ -50,25 +47,26 @@ const authenticate = createAsyncThunk("authenticate", async () => {
     try {
         let token = localStorage.getItem("token");
 
-        if (token){
-        let response = await axios.post("http://localhost:3000/api/user/authenticated", null, {
-            headers: {
-                'Authorization': 'Bearer ' + token
-            }
-        })
-        return {
-            user : response.data.user,
-            token : token
-        }}
-          /*  .then((response) => {
-                console.log("authenticated seccessfully");
-                localStorage.setItem("token", response.data.token)
-                return response.data.user
+        if (token) {
+            let response = await axios.post("http://localhost:3000/api/user/authenticated", null, {
+                headers: {
+                    'Authorization': 'Bearer ' + token
+                }
             })
+            return {
+                user: response.data.user,
+                token: token
+            }
+        }
+        /*  .then((response) => {
+              console.log("authenticated seccessfully");
+              localStorage.setItem("token", response.data.token)
+              return response.data.user
+          })
 
-        return {
-            user: user
-        }*/
+      return {
+          user: user
+      }*/
 
     } catch (err) {
         console.log(err.message);
@@ -91,12 +89,12 @@ const authenticate = createAsyncThunk("authenticate", async () => {
     }
 })*/
 
-const sign_out = createAction( "sign_out", () => {
+const sign_out = createAction("sign_out", () => {
     localStorage.removeItem('token')
     return {
-        payload : null
+        payload: null
     }
-} )
+})
 
 
 const getUsersAction = { sign_in, sign_up, authenticate, sign_out }

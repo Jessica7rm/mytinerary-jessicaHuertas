@@ -39,8 +39,11 @@ function index() {
                 country: country.current.value,
             };
             dispatch(getUsersAction.sign_up(body)).then((response) => {
+               if (response.payload.userCreate){
+                console.log(response.payload.userCreate);
                 alert("Welcome, successful registration")
                 navigate('/')
+               } 
             })
         }
     };
@@ -78,7 +81,7 @@ function index() {
                 </div>
                 <div className="row g-3">
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                        <input type="text" className="form-control" placeholder="Photo" aria-label="Photo" ref={url_img} />
+                        <input type="text" className="form-control" placeholder="Url image" aria-label="Photo" ref={url_img} />
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
                         <select className="form-select" aria-label="Default select example" name="country" ref={country}>

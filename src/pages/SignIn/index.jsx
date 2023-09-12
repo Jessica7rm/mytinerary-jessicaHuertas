@@ -22,8 +22,10 @@ const index = () => {
         password: password.current.value,
       };
       dispatch(getUsersAction.sign_in(body)).then((response) =>{
-        alert ("Welcome " + response.payload.user.name)
-        navigate('/')
+        if (response.payload.user) {
+          alert ("Welcome " + response.payload.user.name);
+          navigate("/");
+        } 
       })
     } 
   };
