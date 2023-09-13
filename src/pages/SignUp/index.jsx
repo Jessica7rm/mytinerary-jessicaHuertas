@@ -6,6 +6,8 @@ import getUsersAction from "../../store/actions/usersActions";
 import { GoogleLogin } from '@react-oauth/google';
 import jwtDecode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
+
 
 function index() {
     const [countries, setCountries] = useState([]);
@@ -30,7 +32,11 @@ function index() {
         e.preventDefault();
         const aux = [name, lastname, email, password, url_img, country];
         if (aux.some((campo) => !campo.current.value)) {
-            alert("All fields are required");
+            Swal.fire({
+                icon: 'error',
+                title: 'Something went wrong',
+                text: 'All fields are required',
+            })
         } else {
             const body = {
                 name: name.current.value,
@@ -101,10 +107,10 @@ function index() {
                 </div>
                 <div className="row g-3">
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                        <input type="email" className="form-control" placeholder="Email" aria-label="Email" ref={email} required />
+                        <input type="email" className="form-control" placeholder="Email" aria-label="Email" ref={email} />
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                        <input type="password" className="form-control" placeholder="Password" aria-label="Password" ref={password} required />
+                        <input type="password" className="form-control" placeholder="Password" aria-label="Password" ref={password} />
                     </div>
                 </div>
                 <div className="row g-3">
