@@ -5,6 +5,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
+import Swal from 'sweetalert2'
+
+
 
 const index = () => {
   const email = useRef(null);
@@ -17,7 +20,11 @@ const index = () => {
     e.preventDefault();
     const aux = [email, password];
     if (aux.some((campo) => !campo.current.value)) {
-      alert("All fields are required");
+      Swal.fire({
+        icon: 'error',
+        title: 'Something went wrong',
+        text: 'All fields are required',
+    })
     } else {
       const body = {
         email: email.current.value,
@@ -57,11 +64,11 @@ const index = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="inputEmail4" className="form-label">Email</label>
-          <input type="text" className="form-control" placeholder="Email" aria-label="Email" id="inputEmail4" ref={email} />
+          <input type="email" className="form-control" placeholder="Email" aria-label="Email" id="inputEmail4" ref={email} />
         </div>
         <div className="mb-3">
           <label htmlFor="inputPassword4" className="form-label">Password</label>
-          <input type="text" className="form-control" placeholder="Password" aria-label="Password" id="inputPassword4" ref={password} />
+          <input type="password" className="form-control" placeholder="Password" aria-label="Password" id="inputPassword4" ref={password} />
         </div>
         <button type="submit" className="btn btn-secondary">Login</button>
         <GoogleLogin
