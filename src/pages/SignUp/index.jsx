@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import getUsersAction from "../../store/actions/usersActions";
+import { GoogleLogin } from '@react-oauth/google';
+import jwtDecode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 
 function index() {
@@ -38,14 +40,35 @@ function index() {
                 url_img: url_img.current.value,
                 country: country.current.value,
             };
-            dispatch(getUsersAction.sign_up(body)).then((response) => {
-               if (response.payload.userCreate){
-                console.log(response.payload.userCreate);
-                alert("Welcome, successful registration")
-                navigate('/')
-               } 
-            })
+            dispatch(getUsersAction.sign_up(body))
+                .then((response) => {
+                    if (response.payload) {
+                        console.log(response.payload);
+                        navigate('/')
+                    }
+                })
         }
+    };
+
+    const singUpWhithGoogle = (credentialResponse) => {
+        const dataUser = jwtDecode(credentialResponse.credential);
+        console.log(dataUser);
+
+        const body = {
+            name: dataUser.given_name,
+            lastname: dataUser.family_name,
+            email: dataUser.email,
+            password: dataUser.sub,
+            url_img: dataUser.picture,
+            country: "not_country"
+        };
+        dispatch(getUsersAction.sign_up(body))
+            .then((response) => {
+                if (response.payload) {
+                    console.log(response.payload);
+                    navigate('/')
+                }
+            })
     };
 
     return (
@@ -60,8 +83,13 @@ function index() {
             <form className="formUp" onSubmit={handleSubmit}>
                 <h3>Create account</h3>
                 <div className='formGroup'>
-                    <p>Sing up with email <a href="" ><i className="bi bi-google"></i></a></p>
-                    <p>Already have an account? <a href="/signIn" >Sing in</a></p>
+                    <p>Sing up with email </p><GoogleLogin
+                        text="signup_with"
+                        onSuccess={singUpWhithGoogle}
+                        onError={() => {
+                            console.log('Login Failed');
+                        }} />
+                    <p className="textp" >Already have an account? <a href="/signIn" >Sing in</a></p>
                 </div>
                 <div className="row g-3">
                     <div className="col-sm-12 col-md-6 col-lg-6">
@@ -73,10 +101,10 @@ function index() {
                 </div>
                 <div className="row g-3">
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                        <input type="email" className="form-control" placeholder="Email" aria-label="Email" ref={email} required/>
+                        <input type="email" className="form-control" placeholder="Email" aria-label="Email" ref={email} required />
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-6">
-                        <input type="password" className="form-control" placeholder="Password" aria-label="Password" ref={password} required/>
+                        <input type="password" className="form-control" placeholder="Password" aria-label="Password" ref={password} required />
                     </div>
                 </div>
                 <div className="row g-3">
