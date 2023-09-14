@@ -65,7 +65,7 @@ const sign_up = createAsyncThunk("sign_up", async (body) => {
     try {
 
         const response = await axios.post("http://localhost:3000/api/user/register", body)
-        .then((res) => {
+
         localStorage.setItem('token', response.data.token);
         console.log("Successfully logged in");
         console.log(response.data.token);
@@ -87,25 +87,16 @@ const sign_up = createAsyncThunk("sign_up", async (body) => {
             title: 'Signed in successfully'
         })
 
-        console.log(res);
         return response.data
 
-    }).catch((error) => {
+    } catch (error) {
 
         let errorMessages = error.response.data.message
-
-        Swal.fire({
-            icon: 'error',
-            title: 'Could not register',
-            text: errorMessages,
-        })
-    });
-    } catch (err) {
-        console.log(err.message);
+       
         Swal.fire({
             icon: 'error',
             title: 'Something went wrong',
-            text: 'Could not register, please check that the data is correct',
+            text: errorMessages,
         })
     }
 });
