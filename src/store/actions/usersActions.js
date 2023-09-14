@@ -36,27 +36,19 @@ const sign_in = createAsyncThunk("sign_in", async (payload) => {
 
                 return response.data.user
             })
-            .catch((error) => {
-
-                let errorMessages = error.response.data.message
-                console.log(errorMessages)
-
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Could not register',
-                    text: errorMessages,
-                })
-            });
 
         return {
             user: user
         };
-    } catch (err) {
-        console.log(err.message);
+
+    } catch (error) {
+
+        let errorMessages = error.response.data.message
+        console.log(errorMessages);
         Swal.fire({
             icon: 'error',
             title: 'Something went wrong',
-            text: 'Please check that the email and password are correct',
+            text: errorMessages,
         })
     }
 });
@@ -92,7 +84,7 @@ const sign_up = createAsyncThunk("sign_up", async (body) => {
     } catch (error) {
 
         let errorMessages = error.response.data.message
-       
+
         Swal.fire({
             icon: 'error',
             title: 'Something went wrong',
