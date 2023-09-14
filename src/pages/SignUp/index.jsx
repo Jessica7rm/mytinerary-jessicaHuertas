@@ -48,8 +48,8 @@ function index() {
             };
             dispatch(getUsersAction.sign_up(body))
                 .then((response) => {
-                    if (response.payload) {
-                        console.log(response.payload);
+                    if (response.payload.userCreate) {
+                        console.log(response.payload.userCreate);
                         navigate('/')
                     }
                 })
@@ -70,8 +70,8 @@ function index() {
         };
         dispatch(getUsersAction.sign_up(body))
             .then((response) => {
-                if (response.payload) {
-                    console.log(response.payload);
+                if (response.payload.userCreate) {
+                    console.log(response.payload.userCreate);
                     navigate('/')
                 }
             })
